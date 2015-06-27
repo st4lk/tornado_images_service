@@ -1,1 +1,2 @@
 tornado==4.2
+-e git://github.com/yyuu/botornado.git#egg=botornado
