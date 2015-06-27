@@ -3,6 +3,7 @@ Tornado images service
 
 Upload to heroku
 ----------------
+
 - Create app
 
         $ heroku create
@@ -19,8 +20,22 @@ Upload to heroku
 
         $ git push heroku master
 
-Test with curl
---------------
+- Check logs (add `--tail` to listen for updates)
+
+        $ heroku logs --tail
+
+- Test with curl (replace url if needed)
+
+        curl -F "image=@/path/to/test.png" https://lit-wave-4886.herokuapp.com/api/images
+
+- Url can be found in logs
+
+        2015-06-27T21:30:42.021093+00:00 app[web.1]: [I 150627 21:30:42 s3:30] Amazon S3: http://bucketfortestprojects.s3.amazonaws.com/a02283b2-93d0-4007-9145-189d0f7b7e41
+
+    So file url is [http://bucketfortestprojects.s3.amazonaws.com/a02283b2-93d0-4007-9145-189d0f7b7e41](http://bucketfortestprojects.s3.amazonaws.com/a02283b2-93d0-4007-9145-189d0f7b7e41)
+
+Local test with curl
+--------------------
 
 - Start tornado server
 
