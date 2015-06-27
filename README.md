@@ -1,6 +1,24 @@
 Tornado images service
 ======================
 
+Upload to heroku
+----------------
+- Create app
+
+        $ heroku create
+
+- Define Amazon S3 credentials
+
+        $ heroku config:set AWS_ACCESS_KEY=xxx AWS_SECRET_KEY=yyy
+
+- Optional define Amazon S3 bucket name (default 'bucketfortestprojects')
+
+        $ heroku config:set S3_BUCKET=zzz
+
+- Push to heroku
+
+        $ git push heroku master
+
 Test with curl
 --------------
 
