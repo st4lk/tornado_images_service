@@ -26,6 +26,6 @@ class AmazonS3Mixin(object):
         if public:
             params['policy'] = 'public-read'
         result = yield gen.Task(k.set_contents_from_string, content, **params)
-        l.info(u"Amazon S3: {0}".format(
+        l.info(u"Amazon S3 url: {0}".format(
             k.generate_url(expires_in=0, query_auth=False, force_http=True)))
         raise gen.Return(result)

@@ -2,9 +2,10 @@
 
 {% block content %}
     <h1>Welcome to images service</h1>
+    <div>Send POST request to <a href="{{reverse_url('images')}}">{{reverse_url('images')}}</a> with included file(s), name 'image'</div>
     <div>Details can be found on <a href="https://github.com/st4lk/tornado_images_service">github</a></div>
 
-    <form style="margin-top: 20px;" action="/api/images" method="post" enctype="multipart/form-data">
+    <form style="margin-top: 20px;" action="{{reverse_url('images')}}" method="post" enctype="multipart/form-data">
         <fieldset>
         <legend>Manual upload image</legend>
         <input type="file" name="image" accept="image/jpeg,image/png,image/gif">

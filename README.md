@@ -1,6 +1,8 @@
 Tornado images service
 ======================
 
+Heroku url: [https://lit-wave-4886.herokuapp.com/](https://lit-wave-4886.herokuapp.com/)
+
 Upload to heroku
 ----------------
 
@@ -20,13 +22,17 @@ Upload to heroku
 
         $ git push heroku master
 
-- Check logs (add `--tail` to listen for updates)
+- Check logs
 
         $ heroku logs --tail
 
 - Test with curl (replace url if needed)
 
         curl -F "image=@/path/to/test.png" https://lit-wave-4886.herokuapp.com/api/images
+
+    Also multiple files can be sent
+
+        curl -F "image=@/path/to/test1.png" -F "image=@/path/to/test2.png" https://lit-wave-4886.herokuapp.com/api/images
 
 - Url can be found in logs
 
