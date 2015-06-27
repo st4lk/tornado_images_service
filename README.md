@@ -3,6 +3,10 @@ Tornado images service
 
 Heroku url: [https://lit-wave-4886.herokuapp.com/](https://lit-wave-4886.herokuapp.com/)
 
+Send POST request to [/api/images](https://lit-wave-4886.herokuapp.com/api/images) with file(s) in 'image' field.
+
+Or upload with html form found at [home](https://lit-wave-4886.herokuapp.com/) page.
+
 Upload to heroku
 ----------------
 
