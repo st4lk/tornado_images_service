@@ -3,4 +3,12 @@
 {% block content %}
     <h1>Welcome to images service</h1>
     <div>Details can be found on <a href="https://github.com/st4lk/tornado_images_service">github</a></div>
+
+    <form style="margin-top: 20px;" action="/api/images" method="post" enctype="multipart/form-data">
+        <fieldset>
+        <legend>Manual upload image</legend>
+        <input type="file" name="image" accept="image/jpeg,image/png,image/gif">
+        <p><input type="submit" value="Send"></p>
+        </fieldset>
+    </form>
 {% end %}
