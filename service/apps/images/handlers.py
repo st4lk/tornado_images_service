@@ -10,7 +10,7 @@ class ImageHandler(AmazonS3Mixin, JSONResponseMixin, tornado.web.RequestHandler)
     @gen.coroutine
     def post(self):
         if 'image' not in self.request.files:
-            self.respond_json({'error': "specify at least 1 in 'image' field"}, 400)
+            self.respond_json({'error': "specify at least 1 file in 'image' field"}, 400)
             return
         success = True
         bucket = yield self.get_bucket()
